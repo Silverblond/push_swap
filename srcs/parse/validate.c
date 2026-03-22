@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:45:33 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/22 21:52:22 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/22 22:42:41 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static int	is_valid_int(char *str)
 	return (1);
 }
 
-static int	is_duplicate(t_stack *stack, int value)
+static int	is_duplicate(t_stack *s, int value)
 {
 	t_node	*cur;
 
-	cur = stack->top;
+	cur = s->top;
 	while(cur)
 	{
 		if (cur->value == value)
