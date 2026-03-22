@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: it <it@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 11:01:25 by it                #+#    #+#             */
-/*   Updated: 2025/05/06 14:07:00 by it               ###   ########.fr       */
+/*   Updated: 2026/03/23 00:00:19 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 static int	count_word(const char *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:45:33 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/22 22:42:41 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 00:00:43 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,47 @@ static long	ft_atoi(char *str)
 		i++;
 	}
 	return (result * sign);
+}
+void	free_word(char **words)
+{
+	int	i;
+
+	i = 0;
+	while (words[i])
+		free(words[i++]);
+	free(words);
+}
+
+void	split_push(char *str, t_stack *s)
+{
+	char	**words;
+	int		i;
+	long	value;
+
+	words = ft_split(str, ' ');
+	if (!words)
+		error_exit(s, NULL);
+	i = 0;
+	while (words[i])
+	{
+		if (!is_valid_int(words[i]))
+		{
+			free_word(words);
+			error_exit(s, NULL);
+		}
+		value = ft_atoi(words[i]);
+		if (value > 2147483647 || value < -2147483648)
+		{
+			free_word(words);
+			error_exit(s, NULL);
+		}
+		if (is_duplicate(s, (int)value))
+		{
+			free_word(words);
+			error_exit(s, NULL);
+		}
+		push_node(s, (int)value);
+		i++;
+	}
+	free_word(words);
 }
