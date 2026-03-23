@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:48:11 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 18:49:27 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 19:42:29 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,6 @@ static void find_01(t_stack *a, t_stack *b, int target_index)
 
 void	sort_5(t_stack *a, t_stack *b)
 {
-	// int	size;
-
-	// size = a->size;
 	find_01(a, b, 0);
 	find_01(a, b, 1);
 	sort_3(a);

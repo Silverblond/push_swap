@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 02:59:41 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 18:52:41 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 19:42:33 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	main(int argc, char **argv)
 			sort_3(a);
 		else if (a->size <= 5)
 			sort_5(a, b);
-		// else
-		// 	sort_radix(a, b);
+		else
+			sort_radix(a, b);
 	}
 	free_stack(a);
 	free_stack(b);

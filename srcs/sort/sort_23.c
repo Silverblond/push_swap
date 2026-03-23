@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 23:56:22 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 17:48:09 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 19:42:30 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,7 @@ void	sort_3(t_stack *a)
         rra(a);
     }
     else if (top > mid && mid < bot && top > bot) //3 2 1
-    {
-
-    }
+		ra(a);
     else if (top < mid && mid > bot && top < bot) //1 3 2
     {
         sa(a);

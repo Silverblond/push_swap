@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 17:23:23 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 17:47:47 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 19:42:37 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ void	free_stack(t_stack *s);
 void	sort_2(t_stack *a);
 void	sort_3(t_stack *a);
 void	sort_5(t_stack *a, t_stack *b);
-void	radix_sort(t_stack *a, t_stack *b);
+void	sort_radix(t_stack *a, t_stack *b);
+
 #endif
