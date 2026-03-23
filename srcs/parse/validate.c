@@ -6,7 +6,7 @@
 /*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:45:33 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 21:26:32 by dkim             ###   ########.fr       */
+/*   Updated: 2026/03/23 21:40:41 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ void	free_word(char **words)
 	free(words);
 }
 
-//길이 줄이기
 void	split_push(char *str, t_stack *s)
 {
 	char	**words;
@@ -100,21 +99,12 @@ void	split_push(char *str, t_stack *s)
 	while (i >= 0)
 	{
 		if (!is_valid_int(words[i]))
-		{
-			free_word(words);
-			error_exit(s, NULL);
-		}
+			free_and_exit(words, s);
 		value = ft_atoi(words[i]);
 		if (value > 2147483647 || value < -2147483648)
-		{
-			free_word(words);
-			error_exit(s, NULL);
-		}
+			free_and_exit(words, s);
 		if (is_duplicate(s, (int)value))
-		{
-			free_word(words);
-			error_exit(s, NULL);
-		}
+			free_and_exit(words, s);
 		push_node(s, (int)value);
 		i--;
 	}

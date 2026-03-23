@@ -6,7 +6,7 @@
 /*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 17:23:23 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 21:31:08 by dkim             ###   ########.fr       */
+/*   Updated: 2026/03/23 21:39:08 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 typedef struct s_node
 {
@@ -51,6 +50,8 @@ void	set_index(t_stack *s);
 void	parse(int argc, char **argv, t_stack *s);
 void	split_push(char *str, t_stack *s);
 void	error_exit(t_stack *a, t_stack *b);
+void	free_and_exit(char **words, t_stack *s);
+void	free_word(char **words);
 char	**ft_split(char const *s, char c);
 void	push_node(t_stack *s, int value);
 void	free_stack(t_stack *s);
