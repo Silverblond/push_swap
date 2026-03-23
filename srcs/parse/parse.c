@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:19:34 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 17:48:25 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 21:26:02 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void parse_push(int argc, char **argv, t_stack *s)
+static void	parse_push(int argc, char **argv, t_stack *s)
 {
 	int	i;
 

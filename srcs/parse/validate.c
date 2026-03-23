@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validate.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:45:33 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 20:44:43 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 21:26:32 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	is_duplicate(t_stack *s, int value)
 	if (!s || s->size == 0)
 		return (0);
 	cur = s->top;
-	while(cur)
+	while (cur)
 	{
 		if (cur->value == value)
 			return (1);
@@ -69,6 +69,7 @@ static long	ft_atoi(char *str)
 	}
 	return (result * sign);
 }
+
 void	free_word(char **words)
 {
 	int	i;

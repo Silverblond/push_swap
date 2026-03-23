@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_rrotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 19:42:05 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 00:01:01 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 21:24:42 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rra(t_stack *a)
 {
 	t_node	*cur;
 
-	if (a->size <2)
+	if (a->size < 2)
 		return ;
 	cur = a->top;
 	while (cur->next->next)
@@ -31,7 +31,7 @@ void	rrb(t_stack *b)
 {
 	t_node	*cur;
 
-	if (b->size <2)
+	if (b->size < 2)
 		return ;
 	cur = b->top;
 	while (cur->next->next)

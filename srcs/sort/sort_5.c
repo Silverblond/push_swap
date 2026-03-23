@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:48:11 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 20:46:47 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 21:29:51 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	find_pos(t_stack *s, int target_index)
 	return (-1);
 }
 
-static void find_01(t_stack *a, t_stack *b, int target_index)
+static void	find_01(t_stack *a, t_stack *b, int target_index)
 {
 	int	pos;
 

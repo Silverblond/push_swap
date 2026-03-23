@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 17:23:23 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 19:42:37 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 21:31:08 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ void	pb(t_stack *a, t_stack *b);
 void	sa(t_stack *s);
 void	sb(t_stack *s);
 void	ss(t_stack *a, t_stack *b);
-void    ra(t_stack *a);
-void    rb(t_stack *b);
-void    rr(t_stack *a, t_stack *b);
-void    rra(t_stack *a);
-void    rrb(t_stack *b);
-void    rrr(t_stack *a, t_stack *b);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
 
 t_stack	*new_stack(void);
 void	push_node(t_stack *s, int value);
 void	free_stack(t_stack *s);
-int	is_sorted(t_stack *s);
+int		is_sorted(t_stack *s);
 void	set_index(t_stack *s);
 
 void	parse(int argc, char **argv, t_stack *s);

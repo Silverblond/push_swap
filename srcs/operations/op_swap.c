@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 18:42:18 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 00:01:04 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 21:25:10 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	sb(t_stack *b)
 	write(1, "sb\n", 3);
 }
 
-void    ss(t_stack *a, t_stack *b)
+void	ss(t_stack *a, t_stack *b)
 {
-    t_node	*tmp;
+	t_node	*tmp;
 
 	if (a->size >= 2)
 	{
@@ -55,7 +55,6 @@ void    ss(t_stack *a, t_stack *b)
 		b->top->next = tmp->next;
 		tmp->next = b->top;
 		b->top = tmp;
-
 	}
 	write(1, "ss\n", 3);
 }
