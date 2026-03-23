@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:45:33 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 00:00:43 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 17:48:18 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static int	is_duplicate(t_stack *s, int value)
 {
 	t_node	*cur;
 
+	if (!s || s->size == 0)
+		return (0);
 	cur = s->top;
 	while(cur)
 	{
@@ -71,21 +73,28 @@ void	free_word(char **words)
 
 	i = 0;
 	while (words[i])
+	{
 		free(words[i++]);
+	}
 	free(words);
 }
 
+//길이 줄이기
 void	split_push(char *str, t_stack *s)
 {
 	char	**words;
 	int		i;
 	long	value;
+	int		len;
 
 	words = ft_split(str, ' ');
 	if (!words)
 		error_exit(s, NULL);
-	i = 0;
-	while (words[i])
+	len = 0;
+	while (words[len])
+		len++;
+	i = len - 1;
+	while (i >= 0)
 	{
 		if (!is_valid_int(words[i]))
 		{
@@ -104,7 +113,7 @@ void	split_push(char *str, t_stack *s)
 			error_exit(s, NULL);
 		}
 		push_node(s, (int)value);
-		i++;
+		i--;
 	}
 	free_word(words);
 }
