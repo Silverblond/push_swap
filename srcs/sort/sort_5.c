@@ -6,7 +6,7 @@
 /*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:48:11 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 19:42:29 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/23 20:46:47 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,50 @@
 	3. push back (pa,pa)
 */
 
+static int	find_pos(t_stack *s, int target_index)
+{
+	t_node	*cur;
+	int		pos;
+
+	cur = s->top;
+	pos = 0;
+	while (cur)
+	{
+		if (cur->index == target_index)
+			return (pos);
+		cur = cur->next;
+		pos++;
+	}
+	return (-1);
+}
+
 static void find_01(t_stack *a, t_stack *b, int target_index)
 {
-	int	i;
-	int	size;
+	int	pos;
 
-	size = a->size;
-	i = 0;
-	while (a->top->index != target_index)
+	pos = find_pos(a, target_index);
+	if (pos <= a->size / 2)
 	{
-		if (i < size / 2)
+		while (pos--)
 			ra(a);
-		else
+	}
+	else
+	{
+		while (pos++ < a->size)
 			rra(a);
-		i++;
 	}
 	pb(a, b);
 }
 
 void	sort_5(t_stack *a, t_stack *b)
 {
+	if (a->size == 4)
+	{
+		find_01(a, b, 0);
+		sort_3(a);
+		pa(a, b);
+		return ;
+	}
 	find_01(a, b, 0);
 	find_01(a, b, 1);
 	sort_3(a);
