@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 02:59:41 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 21:30:35 by dkim             ###   ########.fr       */
+/*   Updated: 2026/03/23 21:55:23 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	a = new_stack();
-	b = new_stack();
 	parse(argc, argv, a);
+	b = new_stack();
 	set_index(a);
 	if (!is_sorted(a))
 	{
