@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:48:11 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/24 13:57:09 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/24 14:10:40 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-	1. find target index(0,1) and find its position (decide to rotate(ra) or reverse rotate(rra))
+	1. find target index(0,1) and find its position
+	(decide to rotate(ra) or reverse rotate(rra))
 	2. find 0,1(ra,rra) and push to b (pb)
 	3. sort 3 in a (sort_3)
 	4. push back (pa,pa)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 11:01:25 by it                #+#    #+#             */
-/*   Updated: 2026/03/24 09:38:24 by kdg              ###   ########.fr       */
+/*   Updated: 2026/03/24 14:10:17 by dkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	count_word(const char *s, char c)
 {
 	size_t	count;
-	int	flag;
+	int		flag;
 
 	count = 0;
 	flag = 0;
