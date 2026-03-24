@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_radix.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:47:57 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 21:27:06 by dkim             ###   ########.fr       */
+/*   Updated: 2026/03/24 13:53:47 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	get_max_bits(int size)
 
 /*
 	1. find max bits of index(get_max_bits)
-	2. for each bit, 0 -> pb(push to b), 1 -> ra(ratate a)
+	2. for each bit, 0 -> pb(push to b), 1 -> ra(rotate a)
 	3. push back (pa)
 */
 void	sort_radix(t_stack *a, t_stack *b)
