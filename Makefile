@@ -1,7 +1,6 @@
 NAME		= push_swap
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror -Ireadlines -Ilibft -Isrcs
-LDFLAGS		= -lreadline
+CFLAGS		= -Wall -Wextra -Werror -Isrcs
 
 SRCS		= srcs/main.c \
             srcs/parse/parse.c \
@@ -22,7 +21,7 @@ OBJS		= $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

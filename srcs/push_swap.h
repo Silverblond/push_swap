@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dkim <dkim@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: kdg <kdg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 17:23:23 by kdg               #+#    #+#             */
-/*   Updated: 2026/03/23 21:39:08 by dkim             ###   ########.fr       */
+/*   Updated: 2026/03/24 09:38:00 by kdg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ void	error_exit(t_stack *a, t_stack *b);
 void	free_and_exit(char **words, t_stack *s);
 void	free_word(char **words);
 char	**ft_split(char const *s, char c);
-void	push_node(t_stack *s, int value);
-void	free_stack(t_stack *s);
 
 void	sort_2(t_stack *a);
 void	sort_3(t_stack *a);
